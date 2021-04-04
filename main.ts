@@ -1,6 +1,10 @@
 namespace SpriteKind {
     export const accessary = SpriteKind.create()
 }
+function addAccessary (image2: Image, name: string) {
+    necklace1 = sprites.create(image2, SpriteKind.accessary)
+}
+let necklace1: Sprite = null
 scene.setBackgroundColor(14)
 let soyeon = sprites.create(img`
     ................................................................................
@@ -125,7 +129,7 @@ let soyeon = sprites.create(img`
     ................................................................................
     `, SpriteKind.Player)
 soyeon.setPosition(42, 57)
-let necklace1 = sprites.create(img`
+addAccessary(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -142,5 +146,4 @@ let necklace1 = sprites.create(img`
     . . . . . . . 7 7 . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    `, SpriteKind.accessary)
-necklace1.setPosition(36, 54)
+    `, "necklaceG")
